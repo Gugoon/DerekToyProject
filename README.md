@@ -30,7 +30,7 @@
     		func boot(routes: RoutesBuilder) throws {
     				//:  /derek/title
     				//:  /derek/items
-    				let api = routes.grouped("derek")
+    				let api = routes.grouped("derek").grouped(JsonWebTokenAuthenticator())
     			
     				//: GET
     		    api.get("title", use: getTitle)
@@ -69,7 +69,38 @@
     
     }
     ```
+
+- Middleware
+ 
+    ```swift
+
+    struct JsonWebTokenAuthenticator: AsyncRequestAuthenticator{
+	    func authenticate(request: Request) async throws {
+        	try request.jwt.verify(as: AuthPayload.self)
+    	}
+	}
     
+
+	struct AuthPayload : JWTPayload {
+    	typealias Payload = AuthPayload
+    
+	    enum CodingKeys : String, CodingKey {
+    	    case subject = "sub"
+	        case expiration = "exp"
+        	case userId = "uid"
+    	}
+
+    	var subject : SubjectClaim
+	    var expiration : ExpirationClaim
+    	var userId : UUID
+    
+	    func verify(using signer: JWTSigner) throws {
+        	try self.expiration.verifyNotExpired()
+    	}
+	}
+
+    ```
+ 
 - Migration
     
     ```swift
@@ -123,6 +154,7 @@
             validations.add("subTitle", as : String.self, is: !.empty, customFailureDescription: "값이 없습니다.")
         }
     }
+
     ```
     
 - Configure
