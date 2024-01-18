@@ -13,8 +13,8 @@
     - Retogit, OkHttp3, Gson
     - androidx.navigation
 
-![iOS_result](https://github.com/Gugoon/DerekToyProject/assets/10485667/6c507d5d-f875-4439-bc40-73b161f2c83b)
-![android_result](https://github.com/Gugoon/DerekToyProject/assets/10485667/eab27691-bb8c-44f9-866a-6a900f6d2133)
+
+
 ---
 
 ### [Server Side] - Vapor + Postgres + Fluent
@@ -159,6 +159,7 @@
 ### [iOS] SwiftUI, Combine
 
 ---
+![iOS_result](https://github.com/Gugoon/DerekToyProject/assets/10485667/6c507d5d-f875-4439-bc40-73b161f2c83b)
 
 - View
     
@@ -287,6 +288,8 @@
 ### [Android] Kotlin, Jetpack Compose, Hilt, Retrofit, OkHttp3
 
 ---
+
+![android_result](https://github.com/Gugoon/DerekToyProject/assets/10485667/eab27691-bb8c-44f9-866a-6a900f6d2133)
 
 - View
     
