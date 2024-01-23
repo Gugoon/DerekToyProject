@@ -1,9 +1,9 @@
 # ToyProject
 
-- ## 1. [Server side](#1-server-side)
-- ## 2. [이력소개 App](#2-resume-app)
-- ## 3. [API Speed 테스트 App](#3-speed-app)
-- ## 4. [플러그링크 App AdminVersion](#4-admin-macos)
+- ## 1. [Server side]
+- ## 2. [이력소개 App]
+- ## 3. [API Speed 테스트 App]
+- ## 4. [플러그링크 App AdminVersion]
 
 
  &nbsp;
@@ -15,8 +15,9 @@
 </span>
 
 ---
+#Server Side
 
-- [Server Side](#server-side)
+- [Server Side]
     - Vapor
     - Fluent
     - Postgres
@@ -198,8 +199,11 @@
 ---
  &nbsp;
 
+<span style="color:orange">
+#Resume App
+## 이력 소개 App
 
-[이력 소개 App](#resume-app)
+</span>
 
 - [iOS]
     - SwiftUI
@@ -535,7 +539,7 @@
  &nbsp;
 
 <span style="color:orange">
-[#Speed App](#3-api-speed-테스트-app)
+#Speed App
 ## API Speed 테스트 App
 </span>
 
@@ -603,7 +607,7 @@ func commonHeader(url : URL , method : RequestType, inModel : Encodable? = nil) 
 ---
 
 <span style="color:orange">
-[#Admin Macos](#app-adminversion)
+#Admin Macos
 ## 플러그링크 App AdminVersion
 </span>
 
