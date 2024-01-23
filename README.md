@@ -199,9 +199,10 @@
  &nbsp;
 
 <span style="color:orange">
-[#Resume App](#2-이력소개-app)
-## 이력 소개 App
 
+
+##[이력 소개 App](#resume-app)
+ 
 </span>
 
 - [iOS]
