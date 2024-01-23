@@ -15,8 +15,6 @@
 </span>
 
 ---
-#Server Side
-
 - [Server Side]
     - Vapor
     - Fluent
@@ -200,7 +198,7 @@
  &nbsp;
 
 <span style="color:orange">
-#Resume App
+
 ## 이력 소개 App
 
 </span>
@@ -539,7 +537,7 @@
  &nbsp;
 
 <span style="color:orange">
-#Speed App
+
 ## API Speed 테스트 App
 </span>
 
@@ -607,7 +605,7 @@ func commonHeader(url : URL , method : RequestType, inModel : Encodable? = nil) 
 ---
 
 <span style="color:orange">
-#Admin Macos
+
 ## 플러그링크 App AdminVersion
 </span>
 
