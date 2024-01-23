@@ -1,14 +1,25 @@
 # ToyProject
 
+- ## 1. Server side
+- ## 2. 이력소개 App
+- ## 3. API Speed 테스트 App
+- ## 4. 플러그링크 App AdminVersion
 
+
+ &nbsp;
+
+<span style="color:orange">
+
+## [Server Side] - Vapor + Postgres + Fluent
+
+</span>
+
+---
 - [Server Side]
     - Vapor
     - Fluent
     - Postgres
-
-
-
-### [Server Side] - Vapor + Postgres + Fluent
+---
 
 1. CRUD 구현
 2. Restful API 아키텍처
@@ -181,9 +192,16 @@
 <img width="1286" alt="endpoint_result_json" src="https://github.com/Gugoon/DerekToyProject/assets/10485667/1c5d4c96-824a-4ae6-976d-3fc74a53c27a">
 
 
+
 ---
 ---
-## 이력 소개 앱
+ &nbsp;
+
+<span style="color:orange">
+
+## 이력 소개 App
+
+</span>
 
 - [iOS]
     - SwiftUI
@@ -516,7 +534,12 @@
 
 ---
 ---
+ &nbsp;
+
+<span style="color:orange">
+
 ## API Speed 테스트 App
+</span>
 
 - [iOS]
 	- SwiftUI
@@ -580,7 +603,12 @@ func commonHeader(url : URL , method : RequestType, inModel : Encodable? = nil) 
 
 ---
 ---
+
+<span style="color:orange">
+
 ## 플러그링크 App AdminVersion
+</span>
+
 - [macOS]
 	- SwiftUI
 	- Combine
