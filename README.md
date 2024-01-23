@@ -1,9 +1,9 @@
 # ToyProject
 
-- ## 1. [Server side](#server-side)
-- ## 2. [이력소개 App](#resume-app)
-- ## 3. [API Speed 테스트 App](#speed-app)
-- ## 4. [플러그링크 App AdminVersion](#admin-macos)
+- ## 1. [Server side](#1-server-side)
+- ## 2. [이력소개 App](#2-resume-app)
+- ## 3. [API Speed 테스트 App](#3-speed-app)
+- ## 4. [플러그링크 App AdminVersion](#4-admin-macos)
 
 
  &nbsp;
@@ -16,7 +16,7 @@
 
 ---
 
-- [Server Side](#1-server-side)
+- [Server Side](#server-side)
     - Vapor
     - Fluent
     - Postgres
@@ -606,7 +606,7 @@ func commonHeader(url : URL , method : RequestType, inModel : Encodable? = nil) 
 ---
 
 <span style="color:orange">
-[#Admin Macos](#4-플러그링크-app-adminversion)
+[#Admin Macos](#app-adminversion)
 ## 플러그링크 App AdminVersion
 </span>
 
