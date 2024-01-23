@@ -198,12 +198,8 @@
 ---
  &nbsp;
 
-<span style="color:orange">
 
-
-##[이력 소개 App](#resume-app)
- 
-</span>
+[이력 소개 App](#resume-app)
 
 - [iOS]
     - SwiftUI
