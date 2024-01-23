@@ -185,11 +185,12 @@
     ```
     
 
-### EndPoint 결과
-<img width="972" alt="endpoint_result_db" src="https://github.com/Gugoon/DerekToyProject/assets/10485667/7b44ce3b-6dfd-439b-824c-ee794de90999">
+    ### EndPoint 결과
+    <img width="972" alt="endpoint_result_db" src="https://github.com/Gugoon/DerekToyProject/assets/10485667/7b44ce3b-6dfd-439b-824c-ee794de90999">
 
+    &nbsp;
 
-<img width="1286" alt="endpoint_result_json" src="https://github.com/Gugoon/DerekToyProject/assets/10485667/1c5d4c96-824a-4ae6-976d-3fc74a53c27a">
+    <img width="1286" alt="endpoint_result_json" src="https://github.com/Gugoon/DerekToyProject/assets/10485667/1c5d4c96-824a-4ae6-976d-3fc74a53c27a">
 
 
 
@@ -219,7 +220,7 @@
 2. Restful API
 
 
-![iOS_result](https://github.com/Gugoon/DerekToyProject/assets/10485667/6c507d5d-f875-4439-bc40-73b161f2c83b)
+    ![iOS_result](https://github.com/Gugoon/DerekToyProject/assets/10485667/6c507d5d-f875-4439-bc40-73b161f2c83b)
 
 - View
     
@@ -551,12 +552,13 @@
 3. CardView 정보 : 요청시작 시간, 응답받은 시간, 응답 결과 등을 표현
 4. 150ms 미만이면 GOOD (파랑), 300ms 이상은 BAD(빨강), 나머지는 NORMAL(초록)  
 
+&nbsp;
 
-![derek_api_test](https://github.com/Gugoon/DerekToyProject/assets/10485667/1284debb-5dcd-4c02-a4cd-b3f81e782e1c)
+    ![derek_api_test](https://github.com/Gugoon/DerekToyProject/assets/10485667/1284debb-5dcd-4c02-a4cd-b3f81e782e1c)
 
 
 ```swift
-func commonHeader(url : URL , method : RequestType, inModel : Encodable? = nil) -> URLRequest{
+    func commonHeader(url : URL , method : RequestType, inModel : Encodable? = nil) -> URLRequest{
         var request = URLRequest(url: url)
 
 		//: 생략
@@ -578,6 +580,7 @@ func commonHeader(url : URL , method : RequestType, inModel : Encodable? = nil) 
 ```
 
 ```swift
+
 	struct CalledApiData : Codable{
     	var c_id : Int
 	    var c_url : String?
@@ -595,9 +598,8 @@ func commonHeader(url : URL , method : RequestType, inModel : Encodable? = nil) 
 	//: 지연시간 저장 ex)
 
 	self.apiCalledLog.append(CalledApiData(c_id : logCnt, c_url: url , c_method: method, c_start_time: startTime, c_title: title, c_discription: discription))
-
 ```
-
+    
 ![Simulator Screen Recording - iPhone 15 - 2024-01-23 at 10 15 53](https://github.com/Gugoon/DerekToyProject/assets/10485667/b2d56043-475d-4ad4-bb05-39a79411e07d)
 
 
