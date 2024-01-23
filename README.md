@@ -1,5 +1,6 @@
 # ToyProject
 
+
 - [Server Side]
     - Vapor
     - Fluent
@@ -549,32 +550,53 @@ func commonHeader(url : URL , method : RequestType, inModel : Encodable? = nil) 
         
         self.objectWillChange.send()
         return request
-
-}
+	
+	}
 ```
 
 ```swift
-struct CalledApiData : Codable{
-    var c_id : Int
-    var c_url : String?
-    var c_method : String?
-    var c_start_time : Int?
-    var c_end_time : Int?
-    var c_response_data : String?
-    var c_delay_time : String?
-    var c_condition : String?
-    var c_response_code : String?
-    var c_title : String?
-    var c_discription : String?
-}
+	struct CalledApiData : Codable{
+    	var c_id : Int
+	    var c_url : String?
+    	var c_method : String?
+	    var c_start_time : Int?
+    	var c_end_time : Int?
+    	var c_response_data : String?
+	    var c_delay_time : String?
+	    var c_condition : String?
+	    var c_response_code : String?
+	    var c_title : String?
+	    var c_discription : String?
+	}
 
-//: 지연시간 저장 ex)
+	//: 지연시간 저장 ex)
 
-self.apiCalledLog.append(CalledApiData(c_id : logCnt, c_url: url , c_method: method, c_start_time: startTime, c_title: title, c_discription: discription))
+	self.apiCalledLog.append(CalledApiData(c_id : logCnt, c_url: url , c_method: method, c_start_time: startTime, c_title: title, c_discription: discription))
 
 ```
 
 ![Simulator Screen Recording - iPhone 15 - 2024-01-23 at 10 15 53](https://github.com/Gugoon/DerekToyProject/assets/10485667/b2d56043-475d-4ad4-bb05-39a79411e07d)
 
 
+---
+---
+## 플러그링크 App AdminVersion
+- [macOS]
+	- SwiftUI
+	- Combine
+---
+1. 상용 플러그링크 App[iOS, Android]기능 + 어드민 권한의 수정 삭제 기능
+2. 회원 ID를 통한 열람 가능
+3. API 확인을 위한 Request/Response Json View
+4. 충전기 스티커 용 QrCode Image 생성 
+---
+<img width="1200" alt="image" src="https://github.com/Gugoon/DerekToyProject/assets/10485667/7fe2a33c-dde6-4515-9c19-2f5fd41f9c45">
 
+---
+
+![image](https://github.com/Gugoon/DerekToyProject/assets/10485667/a38fd4e5-138e-4010-92be-39107dfa27c2)
+
+
+---
+
+![AdminQR](https://github.com/Gugoon/DerekToyProject/assets/10485667/4a39220c-bffb-429b-b5b4-d191b224a42c)
