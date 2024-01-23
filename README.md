@@ -1,16 +1,17 @@
 # ToyProject
 
-- ## 1. [Server side]
-- ## 2. [이력소개 App]
-- ## 3. [API Speed 테스트 App]
-- ## 4. [플러그링크 App AdminVersion]
+- ## 1. [Server side](#Server-Side)
+- ## 2. [이력소개 App](#이력소개-App)
+- ## 3. [API Speed 테스트 App](#API-Speed-테스트-App)
+- ## 4. [플러그링크 App AdminVersion](#플러그링크-App-AdminVersion)
 
 
  &nbsp;
 
 <span style="color:orange">
 
-## [Server Side] - Vapor + Postgres + Fluent
+## Server Side 
+Vapor + Postgres + Fluent
 
 </span>
 
@@ -200,7 +201,7 @@
 
 <span style="color:orange">
 
-## 이력 소개 App
+## 이력소개 App
 
 </span>
 
