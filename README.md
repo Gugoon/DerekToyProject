@@ -4,18 +4,8 @@
     - Vapor
     - Fluent
     - Postgres
-- [iOS]
-    - SwiftUI
-    - Combine
-- [Android]
-    - Jetpack Compose
-    - Hilt
-    - Retogit, OkHttp3, Gson
-    - androidx.navigation
 
 
-
----
 
 ### [Server Side] - Vapor + Postgres + Fluent
 
@@ -190,15 +180,26 @@
 <img width="1286" alt="endpoint_result_json" src="https://github.com/Gugoon/DerekToyProject/assets/10485667/1c5d4c96-824a-4ae6-976d-3fc74a53c27a">
 
 
+---
+---
+## 이력 소개 앱
+
+- [iOS]
+    - SwiftUI
+    - Combine
+- [Android]
+    - Jetpack Compose
+    - Hilt
+    - Retogit, OkHttp3, Gson
+    - androidx.navigation
 
 ---
-
 ### [iOS] SwiftUI, Combine
 
 1. MVVM
 2. Restful API
 
----
+
 ![iOS_result](https://github.com/Gugoon/DerekToyProject/assets/10485667/6c507d5d-f875-4439-bc40-73b161f2c83b)
 
 - View
@@ -511,6 +512,62 @@
     
     }
     ```
+
+---
+---
+## API Speed 테스트 App
+
+- [iOS]
+	- SwiftUI
+	- Combine
+---
+![derek_api_test](https://github.com/Gugoon/DerekToyProject/assets/10485667/1284debb-5dcd-4c02-a4cd-b3f81e782e1c)
+
+
+```swift
+func commonHeader(url : URL , method : RequestType, inModel : Encodable? = nil) -> URLRequest{
+        var request = URLRequest(url: url)
+
+		//: 생략
+        
+        for (_, item) in headerOptionList.enumerated(){
+            if let headerFieldName = item.headerFieldName, let headerFieldValue = item.headerFieldValue{
+                Log("### [\(headerFieldName) : \(headerFieldValue)]")
+                request.setValue(headerFieldValue, forHTTPHeaderField: headerFieldName)
+            }
+        }
+        
+        
+        //: 생략
+        
+        self.objectWillChange.send()
+        return request
+
+}
+```
+
+```swift
+struct CalledApiData : Codable{
+    var c_id : Int
+    var c_url : String?
+    var c_method : String?
+    var c_start_time : Int?
+    var c_end_time : Int?
+    var c_response_data : String?
+    var c_delay_time : String?
+    var c_condition : String?
+    var c_response_code : String?
+    var c_title : String?
+    var c_discription : String?
+}
+
+//: 지연시간 저장 ex)
+
+self.apiCalledLog.append(CalledApiData(c_id : logCnt, c_url: url , c_method: method, c_start_time: startTime, c_title: title, c_discription: discription))
+
+```
+
+![Simulator Screen Recording - iPhone 15 - 2024-01-23 at 10 15 53](https://github.com/Gugoon/DerekToyProject/assets/10485667/b2d56043-475d-4ad4-bb05-39a79411e07d)
 
 
 
