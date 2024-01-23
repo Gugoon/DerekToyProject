@@ -1,13 +1,13 @@
 # ToyProject
 
-- ## 1. Server side (#server-side)
-- ## 2. 이력소개 App (#resume-app)
-- ## 3. API Speed 테스트 App (#speed-app)
-- ## 4. 플러그링크 App AdminVersion (#admin-macos)
+- ## 1. [Server side](#server-side)
+- ## 2. [이력소개 App](#resume-app)
+- ## 3. [API Speed 테스트 App](#speed-app)
+- ## 4. [플러그링크 App AdminVersion](#admin-macos)
 
 
  &nbsp;
-#Server Side
+
 <span style="color:orange">
 
 ## [Server Side] - Vapor + Postgres + Fluent
@@ -15,6 +15,8 @@
 </span>
 
 ---
+#Server Side
+
 - [Server Side]
     - Vapor
     - Fluent
