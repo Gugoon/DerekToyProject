@@ -521,6 +521,13 @@
 	- SwiftUI
 	- Combine
 ---
+
+1. App을 시작하면 Derek Server로 부터 테스트할려는 EndPoint 리스트와 설정 Header 값 정보를 받아온다.
+2. 테스트 가능한 Endpoint 응답 값들을  CardView 형태의 화면으로 표출한다. 
+3. CardView 정보 : 요청시작 시간, 응답받은 시간, 응답 결과 등을 표현
+4. 150ms 미만이면 GOOD (파랑), 300ms 이상은 BAD(빨강), 나머지는 NORMAL(초록)  
+
+
 ![derek_api_test](https://github.com/Gugoon/DerekToyProject/assets/10485667/1284debb-5dcd-4c02-a4cd-b3f81e782e1c)
 
 
