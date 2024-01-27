@@ -211,7 +211,7 @@ Vapor + Postgres + Fluent
 - [Android]
     - Jetpack Compose
     - Hilt
-    - Retogit, OkHttp3, Gson
+    - Retrofit, OkHttp3, Gson
     - androidx.navigation
 
 ---
