@@ -219,7 +219,7 @@ Vapor + Postgres + Fluent
 
 1. MVVM
 2. Restful API
-
+3. UITest Code
 
     ![iOS_result](https://github.com/Gugoon/DerekToyProject/assets/10485667/6c507d5d-f875-4439-bc40-73b161f2c83b)
 
@@ -344,7 +344,45 @@ Vapor + Postgres + Fluent
         }
     ```
     
+- UITest
 
+    ```swift
+    private var app : XCUIApplication!
+    
+    override  func setUp() {
+        app = XCUIApplication()
+        continueAfterFailure = false
+        app.launchArguments = ["UITEST"]
+        app.launch()
+    }
+
+
+    func testItemDataUpdate(){
+        mainViewScreen.cardListView.staticTexts["레1뷰"].tap() //: 메인화면에서 특정 CardView를 선택 , 상세 페이지로 진입
+        sleep(1)
+        cardViewScreen.openModifViewButton.tap() //: 수정 버튼 선택, ModifyView 진입
+        modifyViewScreen.sortIdxIDTextField.tap() //: sortIdx TextField 선택
+        modifyViewScreen.sortIdxIDTextField.clearAndEnterText(text: "1") //: 0에서 1로 변경
+        modifyViewScreen.appNameTextField.tap() //: appName TextField 선택
+        modifyViewScreen.appNameTextField.clearAndEnterText(text: "AppName UITEST") //: "AppName UITEST" 변경
+        modifyViewScreen.modifyButton.tap() //: '수정' 버튼 선택 -> [PUT] API 연동
+        
+
+        //: 같은 동작으로 진행 기존 값으로 원복
+        mainViewScreen.cardListView.staticTexts["AppName UITEST"].tap()
+        sleep(1)
+        cardViewScreen.openModifViewButton.tap()
+        modifyViewScreen.sortIdxIDTextField.tap()
+        modifyViewScreen.sortIdxIDTextField.clearAndEnterText(text: "0")
+        modifyViewScreen.appNameTextField.tap()
+        modifyViewScreen.appNameTextField.clearAndEnterText(text: "레1뷰")
+        modifyViewScreen.modifyButton.tap() //: '수정' 버튼 선택 -> [PUT] API 연동
+        
+        XCTAssertTrue(mainViewScreen.cardListView.staticTexts["레1뷰"].exists) //: 기존 값으로 잘 변경 됐으면 테스트 함수 성공
+    }
+        
+    ```
+    
 ---
 
 ### [Android] Kotlin, Jetpack Compose, Hilt, Retrofit, OkHttp3
