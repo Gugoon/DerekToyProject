@@ -305,16 +305,16 @@ Vapor + Postgres + Fluent
 - ViewModel
     
     ```swift
-    **class** DerekViewModel : DefaultViewModel {
-    			var headerData : DerekTitleResponseDTO?{
-    		        didSet{
-    		            self.mainTitle = headerData?.mainTitle ?? ""
-    		            self.subTitle = headerData?.subTitle ?? ""
-    		        }
-    		   }		    
-    		   var derekItems : [DerekItemResponseDTO]?{        
+    class DerekViewModel : DefaultViewModel {
+    	var headerData : DerekTitleResponseDTO?{
+    		didSet{
+    		    self.mainTitle = headerData?.mainTitle ?? ""
+    		    self.subTitle = headerData?.subTitle ?? ""
+    		}
+    	}		    
+    	var derekItems : [DerekItemResponseDTO]?{        
     //: 생략..
-    		   }
+    	}
     }
     ```
     
