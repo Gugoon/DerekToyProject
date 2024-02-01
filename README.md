@@ -220,6 +220,7 @@ Vapor + Postgres + Fluent
 1. MVVM
 2. Restful API
 3. UITest Code
+4. Watch App
 
     ![iOS_result](https://github.com/Gugoon/DerekToyProject/assets/10485667/6c507d5d-f875-4439-bc40-73b161f2c83b)
 
@@ -382,7 +383,11 @@ Vapor + Postgres + Fluent
     }
         
     ```
-    
+
+- Watch App
+
+    ![Simulator Screen Recording - Apple Watch Series 7 (45mm) - 2024-02-01 at 13 57 17](https://github.com/Gugoon/DerekToyProject/assets/10485667/c5c17237-f771-4b20-afef-0713b13fb790)
+
 ---
 
 ### [Android] Kotlin, Jetpack Compose, Hilt, Retrofit, OkHttp3
