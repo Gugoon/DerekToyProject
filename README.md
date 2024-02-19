@@ -393,7 +393,7 @@ Vapor + Postgres + Fluent
 ### [Android] Kotlin, Jetpack Compose, Hilt, Retrofit, OkHttp3
 
 1. MVVM
-2. Restful API
+2. Restful API : (Retorfit Ver) or (Ktor Ver)
 
 ---
 
@@ -538,7 +538,7 @@ Vapor + Postgres + Fluent
     }
     ```
     
-- Network- API
+- Network- API (Retrofit)
     
     ```kotlin
     @Singleton
@@ -550,8 +550,19 @@ Vapor + Postgres + Fluent
         suspend fun getDerekItems(): BaseResponse<Array<DerekItemResponseDTO>>
     }
     ```
+
+- Network- API (Ktor)
     
-- DI
+    ```kotlin
+    @Singleton
+    interface DerekApi {
+        suspend fun getDerekTitle(): BaseResponse<DerekTitleResponseDTO>
+        suspend fun getDerekItems(): BaseResponse<List<DerekItemResponseDTO>>
+    }
+    ```
+    
+
+- DI (Retrofit)
     
     ```kotlin
     object AppModule {
@@ -573,6 +584,45 @@ Vapor + Postgres + Fluent
         }
     
     //: 생략..
+    
+    }
+    ```
+
+- DI (Ktor)
+    
+    ```kotlin
+    object AppModule {
+    
+        @Provides
+        @Singleton
+        fun provideDerekApi(): HttpClient {
+            return HttpClient(CIO){
+                install(Logging){
+                    logger = object : Logger{
+                        override fun log(message: String) {
+                            Log.d("Ktor", message)
+                        }
+                    }
+                    level = LogLevel.ALL
+                }
+
+                install(ContentNegotiation){
+                    json(jsonSetting)
+                }
+                install(HttpTimeout){
+                    connectTimeoutMillis = 3000
+                    requestTimeoutMillis = 3000
+                    socketTimeoutMillis = 3000
+                }
+
+                defaultRequest {
+                    contentType(ContentType.Application.Json)
+                    headers{
+                        append("Authorization", JWT_TOKEN)
+                    }
+                }
+            }
+        }
     
     }
     ```
